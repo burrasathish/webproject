@@ -1,0 +1,65 @@
+ String k_Id=request.getParameter("email");
+        int s_id=Integer.parseInt(k_Id);
+
+        String  password=request.getParameter("password");
+       
+        //  Signup sk=new Signup();
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa");
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction et = null;
+        Signup cust = new Signup();
+
+        try {
+            et = em.getTransaction();
+            et.begin();
+            cust = em.find(Signup.class, s_id);
+            PrintWriter outt=response.getWriter();
+            outt.println(cust);
+
+            cust.setPassword(password);
+            em.persist(cust);
+            et.commit();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            // Close EntityManager
+            em.close();
+        }
+
+
+2)
+ String email=request.getParameter("email");
+        // int s_id=Integer.parseInt(email);
+
+        String  password=request.getParameter("password");
+       
+        //  Signup sk=new Signup();
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa");
+        EntityManager em = emf.createEntityManager();
+
+        String query = "SELECT c FROM Signup c WHERE c.email = :email";
+        
+
+        TypedQuery<Signup> tq = em.createQuery(query, Signup.class);
+
+        // EntityTransaction et = null;
+        // Signup cust = new Signup();
+        tq.setParameter("email",email);
+
+
+        Signup cust = null;
+
+        try {
+            cust=tq.getSingleResult();
+            System.out.println(cust.getEmail()+" "+cust.getPassword());  
+
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            // Close EntityManager
+            em.close();
+        }
+
+
+
