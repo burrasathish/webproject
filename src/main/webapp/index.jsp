@@ -1,21 +1,3 @@
-<!-- <html>
-    <head>
-
-    </head>
-<body>
-<h2>Hello World!</h2>
-<a href="/register">login</a>
-<form action="form"   method="post">
- name<input type="text" name="firstname" ><br>
- lastname<input type="text" name="lastname" ><br>
-  phone<input type="text" name="phone" ><br>
-email<input type="text" name="email" ><br>
-message<input type="text" name="message" ><br>
-<input type="submit" value="button">
-</form>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,11 +5,15 @@ message<input type="text" name="message" ><br>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/Style.css">
-    <script src="Script/Script.js" defer></script>
+    <script src="Script/Script.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+
+    <%
+    response.setHeader("Cache-Control", "no-cache, no-store,must-revalidate");
+    %>
     <div id="container">
         <nav class="navbar">
             <div class="brand-title">

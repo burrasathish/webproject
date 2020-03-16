@@ -1,0 +1,148 @@
+footer {
+    margin-top: 40%;
+    position: relative;
+  
+  }
+  
+  #total_links {
+    height: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 500px;
+    flex-wrap: wrap;
+  
+  
+  }
+  
+  footer>#footer_hr {
+  
+    position: relative;
+    top: -600px;
+    width: 90%;
+    margin-right: 10%;
+    left: 50px;
+  
+  }
+  
+  #insure_logo {
+    z-index: 1;
+    position: relative;
+    bottom: 110px;
+  }
+  
+  .display_view {
+    margin-left: 20px;
+    position: relative;
+    bottom: 100px;
+  }
+  
+  .display_view:hover {
+    fill: hsl(256, 26%, 20%);
+  }
+  
+  #footer_content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;
+    color: grey;
+    font-size: 15px;
+    position: relative;
+    margin-top: -25%;
+    margin-bottom: 0%;
+    /* padding-top: -400px; */
+  }
+  
+  .footer_down {
+    color: black;
+    line-height: 30px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  
+  .footer_down:hover {
+    text-decoration: underline;
+  }
+  
+  #images {
+    position: absolute;
+    top: -15%;
+    max-width: 60%;
+    height: auto;
+  
+  }
+  
+  #mobile_image {
+    max-width: 100%;
+    height: auto;
+    visibility: hidden;
+  }
+  
+  @media only screen and (max-width:850px) {
+    #total_links {
+      display: flex;
+      flex-direction: column;
+      bottom: 120px;
+  
+    }
+  
+    footer>#footer_hr {
+      display: block;
+      position: relative;
+      bottom: 300px;
+      width: 420px;
+      left: -100px;
+      top: -190px;
+      left: 5%
+    }
+  
+    #footer_content {
+      display: block;
+      text-align: center;
+  
+    }
+  
+    .footer_same {
+      margin: 10%;
+    }
+  
+    #images {
+      visibility: hidden;
+    }
+  
+    #mobile_image {
+      visibility: visible;
+      position: relative;
+      top: -170px;
+      left: 30px;
+    }
+  }
+  
+  a:link {
+    text-decoration: none;
+
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+  a{
+      color: black;
+    
+  }

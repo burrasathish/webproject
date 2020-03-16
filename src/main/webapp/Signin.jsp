@@ -8,6 +8,9 @@
     <link href="css/ContactStyle.css" rel="stylesheet" type="text/css">
 
 <body>
+    <%
+    response.setHeader("Cache-Control", "no-cache, no-store,must-revalidate");
+    %>
     <h1 id="title">Login</h1>
     <div id="form-outer">
         <p style="color:brown"></p>
@@ -33,10 +36,8 @@
                 </div>
             </div>
             <button id="submit" type="submit" class="btn btn-success">Submit</button>
-
         </form>
     </div>
 </body>
 </head>
-
 </html>

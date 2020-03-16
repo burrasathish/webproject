@@ -8,7 +8,8 @@
     <link href="css/ContactStyle.css" rel="stylesheet" type="text/css">
 
 <body>
-    <h1 id="title">contact us</h1>
+    <%@include file="Header.jsp"%>
+    <h1 id="title">Sign Up</h1>
     <div id="form-outer">
         <p style="color:brown"></p>
         <form action="sigupform" method="post">
@@ -46,6 +47,7 @@
 
         </form>
     </div>
+    <%@include file="Footer.jsp"%>
 </body>
 </head>
 

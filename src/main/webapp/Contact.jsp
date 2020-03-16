@@ -8,7 +8,10 @@
     <link href="css/ContactStyle.css" rel="stylesheet" type="text/css">
 
 <body>
-    <h1 id="title">contact us</h1>
+    <div>
+    <%@include file="Header.jsp"%>
+    </div>
+    <h1 id="title">Contact Us</h1>
     <div id="form-outer">
         <p style="color:brown"></p>
         <form action="form"   method="post">
@@ -72,7 +75,10 @@
             <button id="submit" type="submit" class="btn btn-success">Submit</button>
 
         </form>
+        
     </div>
+
+    <%@include file="Footer.jsp"%>
 </body>
 </head>
 
